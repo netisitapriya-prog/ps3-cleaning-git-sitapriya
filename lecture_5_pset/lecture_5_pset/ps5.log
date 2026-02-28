@@ -1,0 +1,1608 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\SitaPriya Amaravadi\Desktop\lecture_5_pset\logs\ps5.log
+  log type:  text
+ opened on:  28 Feb 2026, 12:55:42
+
+. import delimited "data\psam_p50.csv", clear varnames(1)
+(encoding automatically selected: UTF-8)
+(286 vars, 6,938 obs)
+
+. ds
+rt         marhm      esp        sciengrlp  fintp      fyoep      pwgtp41
+serialno   marht      esr        sfn        fjwdp      pwgtp1     pwgtp42
+division   marhw      fod1p      sfr        fjwmnp     pwgtp2     pwgtp43
+sporder    marhyp     fod2p      socp       fjwrip     pwgtp3     pwgtp44
+puma       mig        hicov      vpsp       fjwtrnsp   pwgtp4     pwgtp45
+region     mil        hisp       waob       flanp      pwgtp5     pwgtp46
+state      mlpa       indp       fagep      flanxp     pwgtp6     pwgtp47
+adjinc     mlpb       jwap       fancp      fmarp      pwgtp7     pwgtp48
+pwgtp      mlpcd      jwdp       fcitp      fmarhdp    pwgtp8     pwgtp49
+agep       mlpe       lanp       fcitwp     fmarhmp    pwgtp9     pwgtp50
+cit        mlpfg      migpuma    fcowp      fmarhtp    pwgtp10    pwgtp51
+citwp      mlpik      migsp      fddrsp     fmarhwp    pwgtp11    pwgtp52
+cow        mlphj      msp        fdearp     fmarhyp    pwgtp12    pwgtp53
+ddrs       nwab       naicsp     fdeyep     fmigp      pwgtp13    pwgtp54
+dear       nwav       nativity   fdisp      fmigsp     pwgtp14    pwgtp55
+deye       nwla       nop        fdoutp     fmilpp     pwgtp15    pwgtp56
+dout       nwlk       oc         fdphyp     fmilsp     pwgtp16    pwgtp57
+dphy       nwre       occp       fdratp     foccp      pwgtp17    pwgtp58
+drat       oip        paoc       fdratxp    foip       pwgtp18    pwgtp59
+dratx      pap        pernp      fdremp     fpap       pwgtp19    pwgtp60
+drem       relshipp   pincp      fengp      fpernp     pwgtp20    pwgtp61
+eng        retp       pobp       fesrp      fpincp     pwgtp21    pwgtp62
+fer        sch        povpip     fferp      fpobp      pwgtp22    pwgtp63
+gcl        schg       powpuma    ffodp      fpowsp     pwgtp23    pwgtp64
+gcm        schl       powsp      fgclp      fprivcovp  pwgtp24    pwgtp65
+gcr        semp       privcov    fgcmp      fpubcovp   pwgtp25    pwgtp66
+himrks     sex        pubcov     fgcrp      fracp      pwgtp26    pwgtp67
+hins1      ssip       qtrbir     fhicovp    frelshipp  pwgtp27    pwgtp68
+hins2      ssp        rac1p      fhimrksp   fretp      pwgtp28    pwgtp69
+hins3      wagp       rac2p      fhins1p    fschgp     pwgtp29    pwgtp70
+hins4      wkhp       rac3p      fhins2p    fschlp     pwgtp30    pwgtp71
+hins5      wkl        racaian    fhins3c    fschp      pwgtp31    pwgtp72
+hins6      wkwn       racasn     fhins3p    fsemp      pwgtp32    pwgtp73
+hins7      wrk        racblk     fhins4c    fsexp      pwgtp33    pwgtp74
+intp       yoep       racnh      fhins4p    fssip      pwgtp34    pwgtp75
+jwmnp      anc        racnum     fhins5c    fssp       pwgtp35    pwgtp76
+jwrip      anc1p      racpi      fhins5p    fwagp      pwgtp36    pwgtp77
+jwtrns     anc2p      racsor     fhins6p    fwkhp      pwgtp37    pwgtp78
+lanx       decade     racwht     fhins7p    fwklp      pwgtp38    pwgtp79
+mar        dis        rc         fhisp      fwkwnp     pwgtp39    pwgtp80
+marhd      drivesp    sciengp    findp      fwrkp      pwgtp40
+
+. 
+. display "Number of variables = " r(k)
+Number of variables = .
+
+. describe
+
+Contains data
+ Observations:         6,938                  
+    Variables:           286                  
+--------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+--------------------------------------------------------------------------------
+rt              str1    %9s                   RT
+serialno        str13   %13s                  SERIALNO
+division        byte    %8.0g                 DIVISION
+sporder         byte    %8.0g                 SPORDER
+puma            int     %8.0g                 PUMA
+region          byte    %8.0g                 REGION
+state           byte    %8.0g                 STATE
+adjinc          long    %12.0g                ADJINC
+pwgtp           int     %8.0g                 PWGTP
+agep            byte    %8.0g                 AGEP
+cit             byte    %8.0g                 CIT
+citwp           int     %8.0g                 CITWP
+cow             byte    %8.0g                 COW
+ddrs            byte    %8.0g                 DDRS
+dear            byte    %8.0g                 DEAR
+deye            byte    %8.0g                 DEYE
+dout            byte    %8.0g                 DOUT
+dphy            byte    %8.0g                 DPHY
+drat            byte    %8.0g                 DRAT
+dratx           byte    %8.0g                 DRATX
+drem            byte    %8.0g                 DREM
+eng             byte    %8.0g                 ENG
+fer             byte    %8.0g                 FER
+gcl             byte    %8.0g                 GCL
+gcm             byte    %8.0g                 GCM
+gcr             byte    %8.0g                 GCR
+himrks          byte    %8.0g                 HIMRKS
+hins1           byte    %8.0g                 HINS1
+hins2           byte    %8.0g                 HINS2
+hins3           byte    %8.0g                 HINS3
+hins4           byte    %8.0g                 HINS4
+hins5           byte    %8.0g                 HINS5
+hins6           byte    %8.0g                 HINS6
+hins7           byte    %8.0g                 HINS7
+intp            long    %12.0g                INTP
+jwmnp           int     %8.0g                 JWMNP
+jwrip           byte    %8.0g                 JWRIP
+jwtrns          byte    %8.0g                 JWTRNS
+lanx            byte    %8.0g                 LANX
+mar             byte    %8.0g                 MAR
+marhd           byte    %8.0g                 MARHD
+marhm           byte    %8.0g                 MARHM
+marht           byte    %8.0g                 MARHT
+marhw           byte    %8.0g                 MARHW
+marhyp          int     %8.0g                 MARHYP
+mig             byte    %8.0g                 MIG
+mil             byte    %8.0g                 MIL
+mlpa            byte    %8.0g                 MLPA
+mlpb            byte    %8.0g                 MLPB
+mlpcd           byte    %8.0g                 MLPCD
+mlpe            byte    %8.0g                 MLPE
+mlpfg           byte    %8.0g                 MLPFG
+mlpik           byte    %8.0g                 MLPIK
+mlphj           byte    %8.0g                 MLPHJ
+nwab            byte    %8.0g                 NWAB
+nwav            byte    %8.0g                 NWAV
+nwla            byte    %8.0g                 NWLA
+nwlk            byte    %8.0g                 NWLK
+nwre            byte    %8.0g                 NWRE
+oip             long    %12.0g                OIP
+pap             int     %8.0g                 PAP
+relshipp        byte    %8.0g                 RELSHIPP
+retp            long    %12.0g                RETP
+sch             byte    %8.0g                 SCH
+schg            byte    %8.0g                 SCHG
+schl            byte    %8.0g                 SCHL
+semp            long    %12.0g                SEMP
+sex             byte    %8.0g                 SEX
+ssip            int     %8.0g                 SSIP
+ssp             long    %12.0g                SSP
+wagp            long    %12.0g                WAGP
+wkhp            byte    %8.0g                 WKHP
+wkl             byte    %8.0g                 WKL
+wkwn            byte    %8.0g                 WKWN
+wrk             byte    %8.0g                 WRK
+yoep            int     %8.0g                 YOEP
+anc             byte    %8.0g                 ANC
+anc1p           int     %8.0g                 ANC1P
+anc2p           int     %8.0g                 ANC2P
+decade          byte    %8.0g                 DECADE
+dis             byte    %8.0g                 DIS
+drivesp         byte    %8.0g                 DRIVESP
+esp             byte    %8.0g                 ESP
+esr             byte    %8.0g                 ESR
+fod1p           int     %8.0g                 FOD1P
+fod2p           int     %8.0g                 FOD2P
+hicov           byte    %8.0g                 HICOV
+hisp            byte    %8.0g                 HISP
+indp            int     %8.0g                 INDP
+jwap            int     %8.0g                 JWAP
+jwdp            int     %8.0g                 JWDP
+lanp            int     %8.0g                 LANP
+migpuma         long    %8.0g                 MIGPUMA
+migsp           int     %8.0g                 MIGSP
+msp             byte    %8.0g                 MSP
+naicsp          str7    %9s                   NAICSP
+nativity        byte    %8.0g                 NATIVITY
+nop             byte    %8.0g                 NOP
+oc              byte    %8.0g                 OC
+occp            int     %8.0g                 OCCP
+paoc            byte    %8.0g                 PAOC
+pernp           long    %12.0g                PERNP
+pincp           long    %12.0g                PINCP
+pobp            int     %8.0g                 POBP
+povpip          int     %8.0g                 POVPIP
+powpuma         int     %8.0g                 POWPUMA
+powsp           byte    %8.0g                 POWSP
+privcov         byte    %8.0g                 PRIVCOV
+pubcov          byte    %8.0g                 PUBCOV
+qtrbir          byte    %8.0g                 QTRBIR
+rac1p           byte    %8.0g                 RAC1P
+rac2p           int     %8.0g                 RAC2P
+rac3p           byte    %8.0g                 RAC3P
+racaian         byte    %8.0g                 RACAIAN
+racasn          byte    %8.0g                 RACASN
+racblk          byte    %8.0g                 RACBLK
+racnh           byte    %8.0g                 RACNH
+racnum          byte    %8.0g                 RACNUM
+racpi           byte    %8.0g                 RACPI
+racsor          byte    %8.0g                 RACSOR
+racwht          byte    %8.0g                 RACWHT
+rc              byte    %8.0g                 RC
+sciengp         byte    %8.0g                 SCIENGP
+sciengrlp       byte    %8.0g                 SCIENGRLP
+sfn             byte    %8.0g                 SFN
+sfr             byte    %8.0g                 SFR
+socp            str6    %9s                   SOCP
+vpsp            byte    %8.0g                 VPSP
+waob            byte    %8.0g                 WAOB
+fagep           byte    %8.0g                 FAGEP
+fancp           byte    %8.0g                 FANCP
+fcitp           byte    %8.0g                 FCITP
+fcitwp          byte    %8.0g                 FCITWP
+fcowp           byte    %8.0g                 FCOWP
+fddrsp          byte    %8.0g                 FDDRSP
+fdearp          byte    %8.0g                 FDEARP
+fdeyep          byte    %8.0g                 FDEYEP
+fdisp           byte    %8.0g                 FDISP
+fdoutp          byte    %8.0g                 FDOUTP
+fdphyp          byte    %8.0g                 FDPHYP
+fdratp          byte    %8.0g                 FDRATP
+fdratxp         byte    %8.0g                 FDRATXP
+fdremp          byte    %8.0g                 FDREMP
+fengp           byte    %8.0g                 FENGP
+fesrp           byte    %8.0g                 FESRP
+fferp           byte    %8.0g                 FFERP
+ffodp           byte    %8.0g                 FFODP
+fgclp           byte    %8.0g                 FGCLP
+fgcmp           byte    %8.0g                 FGCMP
+fgcrp           byte    %8.0g                 FGCRP
+fhicovp         byte    %8.0g                 FHICOVP
+fhimrksp        byte    %8.0g                 FHIMRKSP
+fhins1p         byte    %8.0g                 FHINS1P
+fhins2p         byte    %8.0g                 FHINS2P
+fhins3c         byte    %8.0g                 FHINS3C
+fhins3p         byte    %8.0g                 FHINS3P
+fhins4c         byte    %8.0g                 FHINS4C
+fhins4p         byte    %8.0g                 FHINS4P
+fhins5c         byte    %8.0g                 FHINS5C
+fhins5p         byte    %8.0g                 FHINS5P
+fhins6p         byte    %8.0g                 FHINS6P
+fhins7p         byte    %8.0g                 FHINS7P
+fhisp           byte    %8.0g                 FHISP
+findp           byte    %8.0g                 FINDP
+fintp           byte    %8.0g                 FINTP
+fjwdp           byte    %8.0g                 FJWDP
+fjwmnp          byte    %8.0g                 FJWMNP
+fjwrip          byte    %8.0g                 FJWRIP
+fjwtrnsp        byte    %8.0g                 FJWTRNSP
+flanp           byte    %8.0g                 FLANP
+flanxp          byte    %8.0g                 FLANXP
+fmarp           byte    %8.0g                 FMARP
+fmarhdp         byte    %8.0g                 FMARHDP
+fmarhmp         byte    %8.0g                 FMARHMP
+fmarhtp         byte    %8.0g                 FMARHTP
+fmarhwp         byte    %8.0g                 FMARHWP
+fmarhyp         byte    %8.0g                 FMARHYP
+fmigp           byte    %8.0g                 FMIGP
+fmigsp          byte    %8.0g                 FMIGSP
+fmilpp          byte    %8.0g                 FMILPP
+fmilsp          byte    %8.0g                 FMILSP
+foccp           byte    %8.0g                 FOCCP
+foip            byte    %8.0g                 FOIP
+fpap            byte    %8.0g                 FPAP
+fpernp          byte    %8.0g                 FPERNP
+fpincp          byte    %8.0g                 FPINCP
+fpobp           byte    %8.0g                 FPOBP
+fpowsp          byte    %8.0g                 FPOWSP
+fprivcovp       byte    %8.0g                 FPRIVCOVP
+fpubcovp        byte    %8.0g                 FPUBCOVP
+fracp           byte    %8.0g                 FRACP
+frelshipp       byte    %8.0g                 FRELSHIPP
+fretp           byte    %8.0g                 FRETP
+fschgp          byte    %8.0g                 FSCHGP
+fschlp          byte    %8.0g                 FSCHLP
+fschp           byte    %8.0g                 FSCHP
+fsemp           byte    %8.0g                 FSEMP
+fsexp           byte    %8.0g                 FSEXP
+fssip           byte    %8.0g                 FSSIP
+fssp            byte    %8.0g                 FSSP
+fwagp           byte    %8.0g                 FWAGP
+fwkhp           byte    %8.0g                 FWKHP
+fwklp           byte    %8.0g                 FWKLP
+fwkwnp          byte    %8.0g                 FWKWNP
+fwrkp           byte    %8.0g                 FWRKP
+fyoep           byte    %8.0g                 FYOEP
+pwgtp1          int     %8.0g                 PWGTP1
+pwgtp2          int     %8.0g                 PWGTP2
+pwgtp3          int     %8.0g                 PWGTP3
+pwgtp4          int     %8.0g                 PWGTP4
+pwgtp5          int     %8.0g                 PWGTP5
+pwgtp6          int     %8.0g                 PWGTP6
+pwgtp7          int     %8.0g                 PWGTP7
+pwgtp8          int     %8.0g                 PWGTP8
+pwgtp9          int     %8.0g                 PWGTP9
+pwgtp10         int     %8.0g                 PWGTP10
+pwgtp11         int     %8.0g                 PWGTP11
+pwgtp12         int     %8.0g                 PWGTP12
+pwgtp13         int     %8.0g                 PWGTP13
+pwgtp14         int     %8.0g                 PWGTP14
+pwgtp15         int     %8.0g                 PWGTP15
+pwgtp16         int     %8.0g                 PWGTP16
+pwgtp17         int     %8.0g                 PWGTP17
+pwgtp18         int     %8.0g                 PWGTP18
+pwgtp19         int     %8.0g                 PWGTP19
+pwgtp20         int     %8.0g                 PWGTP20
+pwgtp21         int     %8.0g                 PWGTP21
+pwgtp22         int     %8.0g                 PWGTP22
+pwgtp23         int     %8.0g                 PWGTP23
+pwgtp24         int     %8.0g                 PWGTP24
+pwgtp25         int     %8.0g                 PWGTP25
+pwgtp26         int     %8.0g                 PWGTP26
+pwgtp27         int     %8.0g                 PWGTP27
+pwgtp28         int     %8.0g                 PWGTP28
+pwgtp29         int     %8.0g                 PWGTP29
+pwgtp30         int     %8.0g                 PWGTP30
+pwgtp31         int     %8.0g                 PWGTP31
+pwgtp32         int     %8.0g                 PWGTP32
+pwgtp33         int     %8.0g                 PWGTP33
+pwgtp34         int     %8.0g                 PWGTP34
+pwgtp35         int     %8.0g                 PWGTP35
+pwgtp36         int     %8.0g                 PWGTP36
+pwgtp37         int     %8.0g                 PWGTP37
+pwgtp38         int     %8.0g                 PWGTP38
+pwgtp39         int     %8.0g                 PWGTP39
+pwgtp40         int     %8.0g                 PWGTP40
+pwgtp41         int     %8.0g                 PWGTP41
+pwgtp42         int     %8.0g                 PWGTP42
+pwgtp43         int     %8.0g                 PWGTP43
+pwgtp44         int     %8.0g                 PWGTP44
+pwgtp45         int     %8.0g                 PWGTP45
+pwgtp46         int     %8.0g                 PWGTP46
+pwgtp47         int     %8.0g                 PWGTP47
+pwgtp48         int     %8.0g                 PWGTP48
+pwgtp49         int     %8.0g                 PWGTP49
+pwgtp50         int     %8.0g                 PWGTP50
+pwgtp51         int     %8.0g                 PWGTP51
+pwgtp52         int     %8.0g                 PWGTP52
+pwgtp53         int     %8.0g                 PWGTP53
+pwgtp54         int     %8.0g                 PWGTP54
+pwgtp55         int     %8.0g                 PWGTP55
+pwgtp56         int     %8.0g                 PWGTP56
+pwgtp57         int     %8.0g                 PWGTP57
+pwgtp58         int     %8.0g                 PWGTP58
+pwgtp59         int     %8.0g                 PWGTP59
+pwgtp60         int     %8.0g                 PWGTP60
+pwgtp61         int     %8.0g                 PWGTP61
+pwgtp62         int     %8.0g                 PWGTP62
+pwgtp63         int     %8.0g                 PWGTP63
+pwgtp64         int     %8.0g                 PWGTP64
+pwgtp65         int     %8.0g                 PWGTP65
+pwgtp66         int     %8.0g                 PWGTP66
+pwgtp67         int     %8.0g                 PWGTP67
+pwgtp68         int     %8.0g                 PWGTP68
+pwgtp69         int     %8.0g                 PWGTP69
+pwgtp70         int     %8.0g                 PWGTP70
+pwgtp71         int     %8.0g                 PWGTP71
+pwgtp72         int     %8.0g                 PWGTP72
+pwgtp73         int     %8.0g                 PWGTP73
+pwgtp74         int     %8.0g                 PWGTP74
+pwgtp75         int     %8.0g                 PWGTP75
+pwgtp76         int     %8.0g                 PWGTP76
+pwgtp77         int     %8.0g                 PWGTP77
+pwgtp78         int     %8.0g                 PWGTP78
+pwgtp79         int     %8.0g                 PWGTP79
+pwgtp80         int     %8.0g                 PWGTP80
+--------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. 
+. display "Number of variables = " r(k)
+Number of variables = 286
+
+. local numeric_vars AGEP WAGP WKHP SCHL PINCP POVPIP ESR COW MAR SEX RAC1P HISP
+>  ADJINC PWGTP
+
+. 
+. local categorical_vars NAICSP SOCP
+
+. 
+. 
+. 
+. display "numeric_vars: `numeric_vars'"
+numeric_vars: AGEP WAGP WKHP SCHL PINCP POVPIP ESR COW MAR SEX RAC1P HISP ADJINC
+>  PWGTP
+
+. 
+. display "categorical_vars: `categorical_vars'"
+categorical_vars: NAICSP SOCP
+
+. * Loop over required numeric variables
+
+. 
+. foreach v of local numeric_vars {
+  2. 
+. 
+. 
+.     * Check variable exists
+. 
+.     capture confirm variable `v'
+  3. 
+. 
+. 
+.     if _rc == 0 {
+  4. 
+. 
+. 
+.         * If not numeric, clean and convert
+. 
+.         capture confirm numeric variable `v'
+  5. 
+.         if _rc != 0 {
+  6. 
+.             replace `v' = "" if inlist(strtrim(`v'), "NA", ".", "")
+  7. 
+.             destring `v', replace
+  8. 
+.         }
+  9. 
+.     }
+ 10. 
+. }
+
+. * Loop over required categorical string variables
+
+. 
+. foreach v of local categorical_vars {
+  2. 
+. 
+. 
+.     * Check variable exists
+. 
+.     capture confirm variable `v'
+  3. 
+.     if _rc == 0 {
+  4. 
+. 
+. 
+.         * Standardize string formatting
+. 
+.         replace `v' = strtrim(`v')
+  5. 
+.         replace `v' = strlower(`v')
+  6. 
+.         replace `v' = strproper(`v')
+  7. 
+. 
+. 
+.         encode `v', gen(`v'_id)
+  8. 
+.     }
+  9. 
+. }
+
+. 
+. 
+. 
+. describe NAICSP_id SOCP_id
+variable NAICSP_id not found
+r(111);
+
+. * Fix: ensure categorical vars are strings before encode
+
+. 
+. foreach v of local categorical_vars {
+  2. 
+. 
+. 
+.     * If variable is numeric, convert to string first
+. 
+.     capture confirm numeric variable `v'
+  3. 
+.     if _rc == 0 {
+  4. 
+.         tostring `v', replace usedisplay format(%20.0g)
+  5. 
+.     }
+  6. 
+. 
+. 
+.     * Now standardize string formatting
+. 
+.     replace `v' = strtrim(`v')
+  7. 
+.     replace `v' = strlower(`v')
+  8. 
+.     replace `v' = strproper(`v')
+  9. 
+. 
+. 
+.     * Encode to labeled numeric ID
+. 
+.     capture drop `v'_id
+ 10. 
+.     encode `v', gen(`v'_id)
+ 11. 
+. }
+variable NAICSP not found
+r(111);
+
+. 
+. 
+. 
+. describe NAICSP_id SOCP_id
+variable NAICSP_id not found
+r(111);
+
+. local categorical_vars naicsp socp
+
+. 
+. display "categorical_vars: `categorical_vars'"
+categorical_vars: naicsp socp
+
+. * Clean and encode categorical variables
+
+. 
+. foreach v of local categorical_vars {
+  2. 
+. 
+. 
+.     * Standardize string formatting
+. 
+.     replace `v' = strtrim(`v')
+  3. 
+.     replace `v' = strlower(`v')
+  4. 
+.     replace `v' = strproper(`v')
+  5. 
+. 
+. 
+.     * Encode to numeric ID
+. 
+.     capture drop `v'_id
+  6. 
+.     encode `v', gen(`v'_id)
+  7. 
+. }
+(0 real changes made)
+(1,682 real changes made)
+(1,682 real changes made)
+(0 real changes made)
+(629 real changes made)
+(629 real changes made)
+
+. 
+. 
+. 
+. * Verify new variables exist
+
+. 
+. describe naicsp_id socp_id
+
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+--------------------------------------------------------------------------------
+naicsp_id       long    %8.0g      naicsp_id
+                                              NAICSP
+socp_id         long    %8.0g      socp_id    SOCP
+
+. count if missing(serialno)
+  0
+
+. 
+. count if missing(sporder)
+  0
+
+. 
+. 
+. 
+. duplicates report serialno sporder
+
+Duplicates in terms of serialno sporder
+
+--------------------------------------
+   Copies | Observations       Surplus
+----------+---------------------------
+        1 |         6938             0
+--------------------------------------
+
+. 
+. isid serialno sporder
+
+. * Save cleaned full dataset
+
+. 
+. save "processed_data\ps5_cleaned_full.dta", replace
+(file processed_data\ps5_cleaned_full.dta not found)
+file processed_data\ps5_cleaned_full.dta saved
+
+. tempname sample_post
+
+. 
+. tempfile sample_steps
+
+. 
+. 
+. 
+. postfile `sample_post' str80 step int n_remaining int n_excluded ///
+/ invalid name
+r(198);
+
+. 
+.     using "`sample_steps'", replace
+command using is unrecognized
+r(199);
+
+. 
+. 
+. 
+. * Record starting N
+
+. 
+. count
+  6,938
+
+. 
+. local n_prev = r(N)
+
+. 
+. 
+. 
+. post `sample_post' ("Start: cleaned observations") (`n_prev') (0)
+post __000000 not found
+r(111);
+
+. * Initialize sample construction table
+
+. 
+. tempname sample_post
+
+. 
+. tempfile sample_steps
+
+. 
+. postfile `sample_post' str80 step int n_remaining int n_excluded using "`sampl
+> e_steps'", replace
+(file C:\Users\SITAPR~1\AppData\Local\Temp\ST_5d30_000002.tmp not found)
+
+. count
+  6,938
+
+. 
+. local n_prev = r(N)
+
+. 
+. post `sample_post' ("Start: cleaned observations") (`n_prev') (0)
+
+. * Inclusion: ages 25–64
+
+. 
+. keep if inrange(agep, 25, 64)
+(3,688 observations deleted)
+
+. 
+. 
+. 
+. count
+  3,250
+
+. 
+. local n_now = r(N)
+
+. 
+. post `sample_post' ("Inclusion: age 25–64") (`n_now') (`n_prev' - `n_now')
+
+. 
+. local n_prev = `n_now'
+
+. * Inclusion: WAGP > 0 and WKHP >= 35
+
+. 
+. keep if wagp > 0 & wkhp >= 35
+(1,145 observations deleted)
+
+. 
+. 
+. 
+. count
+  2,105
+
+. 
+. local n_now = r(N)
+
+. 
+. post `sample_post' ("Inclusion: WAGP > 0 and WKHP >= 35") (`n_now') (`n_prev' 
+> - `n_now')
+
+. 
+. local n_prev = `n_now'
+
+. * Inclusion: employed ESR categories (1 or 2)
+
+. 
+. keep if inlist(esr, 1, 2)
+(75 observations deleted)
+
+. 
+. 
+. 
+. count
+  2,030
+
+. 
+. local n_now = r(N)
+
+. 
+. post `sample_post' ("Inclusion: ESR in {1,2} (employed)") (`n_now') (`n_prev' 
+> - `n_now')
+
+. 
+. local n_prev = `n_now'
+
+. * Exclusion: drop missing key covariates and categorical IDs
+
+. 
+. drop if missing(agep, wagp, wkhp, schl, pincp, povpip, esr, cow, mar, sex, rac
+> 1p, hisp, adjinc, pwgtp, naicsp_id, socp_id)
+(1 observation deleted)
+
+. 
+. 
+. 
+. count
+  2,029
+
+. 
+. local n_now = r(N)
+
+. 
+. post `sample_post' ("Exclusion: drop missing key covariates + IDs") (`n_now') 
+> (`n_prev' - `n_now')
+
+. 
+. local n_prev = `n_now'
+
+. * Derived variable: log wage
+
+. 
+. gen ln_wage = ln(wagp)
+
+. 
+. label var ln_wage "Log wage (ln of WAGP)"
+
+. 
+. 
+. 
+. count
+  2,029
+
+. 
+. local n_now = r(N)
+
+. 
+. post `sample_post' ("Derived: ln_wage = ln(WAGP)") (`n_now') (0)
+
+. postclose `sample_post'
+
+. 
+. 
+. 
+. preserve
+
+. 
+. use "`sample_steps'", clear
+
+. 
+. export delimited using "processed_data\ps5_sample_construction.csv", replace
+(file processed_data\ps5_sample_construction.csv not found)
+file processed_data\ps5_sample_construction.csv saved
+
+. 
+. save "processed_data\ps5_sample_construction.dta", replace
+(file processed_data\ps5_sample_construction.dta not found)
+file processed_data\ps5_sample_construction.dta saved
+
+. 
+. restore
+
+. * Model macros
+
+. 
+. local outcome "ln_wage"
+
+. 
+. 
+. 
+. local covariates_demo     "c.agep i.sex i.rac1p i.hisp"
+
+. 
+. local covariates_humancap "c.schl"
+
+. 
+. local covariates_labor    "c.wkhp i.cow i.mar"
+
+. 
+. local covariates_occ      "i.naicsp_id i.socp_id"
+
+. 
+. 
+. 
+. local model_covariates "`covariates_demo' `covariates_humancap' `covariates_la
+> bor' `covariates_occ'"
+
+. 
+. 
+. 
+. display "Outcome: `outcome'"
+Outcome: ln_wage
+
+. 
+. display "Model covariates: `model_covariates'"
+Model covariates: c.agep i.sex i.rac1p i.hisp c.schl c.wkhp i.cow i.mar i.naicsp
+> _id i.socp_id
+
+. * QA summary loop
+
+. 
+. local qa_vars agep wagp wkhp schl pincp povpip
+
+. 
+. 
+. 
+. foreach v of local qa_vars {
+  2. 
+.     quietly summarize `v'
+  3. 
+.     display "`v': N=" r(N) " mean=" %9.3f r(mean) " sd=" %9.3f r(sd)
+  4. 
+. }
+agep: N=2029 mean=   45.483 sd=   11.391
+wagp: N=2029 mean=80576.792 sd=77003.823
+wkhp: N=2029 mean=   43.494 sd=    7.439
+schl: N=2029 mean=   19.553 sd=    2.807
+pincp: N=2029 mean=85913.146 sd=87500.649
+povpip: N=2029 mean=  411.000 sd=  117.141
+
+. * Counts above hour cutoffs
+
+. 
+. forvalues cutoff = 35/45 {
+  2. 
+.     quietly count if wkhp >= `cutoff'
+  3. 
+.     display "Observations with WKHP >= `cutoff': " r(N)
+  4. 
+. }
+Observations with WKHP >= 35: 2029
+Observations with WKHP >= 36: 1956
+Observations with WKHP >= 37: 1915
+Observations with WKHP >= 38: 1892
+Observations with WKHP >= 39: 1849
+Observations with WKHP >= 40: 1846
+Observations with WKHP >= 41: 692
+Observations with WKHP >= 42: 684
+Observations with WKHP >= 43: 651
+Observations with WKHP >= 44: 640
+Observations with WKHP >= 45: 632
+
+. * Model 1: demographics only
+
+. 
+. reg `outcome' `covariates_demo', vce(robust)
+
+Linear regression                               Number of obs     =      2,029
+                                                F(16, 2008)       =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.0223
+                                                Root MSE          =      .7213
+
+------------------------------------------------------------------------------
+             |               Robust
+     ln_wage | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+        agep |   .0040314   .0013137     3.07   0.002      .001455    .0066078
+       2.sex |  -.1494789   .0323954    -4.61   0.000     -.213011   -.0859468
+             |
+       rac1p |
+          2  |  -.1174333   .2310038    -0.51   0.611    -.5704654    .3355988
+          3  |   .1315247   .1801929     0.73   0.466    -.2218598    .4849093
+          6  |    .003387   .1366248     0.02   0.980    -.2645541    .2713281
+          8  |   -.087082   .1191406    -0.73   0.465     -.320734    .1465701
+          9  |   .0135792   .0637839     0.21   0.831    -.1115102    .1386687
+             |
+        hisp |
+          2  |  -.0973098   .1122222    -0.87   0.386    -.3173939    .1227742
+          3  |  -.0076957   .1769412    -0.04   0.965    -.3547033    .3393119
+          4  |  -.2786251   .1818201    -1.53   0.126    -.6352009    .0779508
+          5  |    .184186   .0762644     2.42   0.016     .0346203    .3337517
+          6  |  -.0847625   .0311816    -2.72   0.007    -.1459141   -.0236109
+          9  |   .9880074   .5302765     1.86   0.063    -.0519424    2.027957
+         11  |  -.0396319   .1233923    -0.32   0.748    -.2816221    .2023584
+         13  |   2.186961   .0637864    34.29   0.000     2.061866    2.312055
+         14  |   .2870018   .0644284     4.45   0.000     .1606483    .4133554
+         16  |  -.0124671   .3742012    -0.03   0.973    -.7463303    .7213961
+         19  |  -.0801397   .0234985    -3.41   0.001    -.1262237   -.0340557
+         23  |   .2444483   .1282814     1.91   0.057    -.0071303    .4960268
+         24  |  -.0049957    .329417    -0.02   0.988    -.6510307    .6410392
+             |
+       _cons |   10.93308    .058446   187.06   0.000     10.81846     11.0477
+------------------------------------------------------------------------------
+
+. 
+. est store m1
+
+. 
+. 
+. 
+. * Model 2: + human capital
+
+. 
+. reg `outcome' `covariates_demo' `covariates_humancap', vce(robust)
+
+Linear regression                               Number of obs     =      2,029
+                                                F(17, 2007)       =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1072
+                                                Root MSE          =     .68946
+
+------------------------------------------------------------------------------
+             |               Robust
+     ln_wage | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+        agep |   .0056132    .001282     4.38   0.000      .003099    .0081274
+       2.sex |  -.2166124   .0309883    -6.99   0.000     -.277385   -.1558399
+             |
+       rac1p |
+          2  |  -.2008864   .2283131    -0.88   0.379    -.6486419    .2468691
+          3  |   .0425314   .1742002     0.24   0.807    -.2991007    .3841636
+          6  |   .0598748   .1125714     0.53   0.595    -.1608941    .2806438
+          8  |  -.1857786     .12486    -1.49   0.137    -.4306473    .0590901
+          9  |   .0505572   .0616091     0.82   0.412    -.0702673    .1713817
+             |
+        hisp |
+          2  |   .1943965   .2426072     0.80   0.423    -.2813917    .6701848
+          3  |  -.0944446   .1960221    -0.48   0.630    -.4788728    .2899835
+          4  |  -.4462742    .197444    -2.26   0.024    -.8334907   -.0590576
+          5  |   .0258328     .07354     0.35   0.725      -.11839    .1700556
+          6  |   -.136026   .0304639    -4.47   0.000    -.1957701   -.0762818
+          9  |   .9099176   .4607122     1.98   0.048     .0063935    1.813442
+         11  |   .0547055   .1113777     0.49   0.623    -.1637225    .2731336
+         13  |   1.866176   .0697185    26.77   0.000     1.729447    2.002904
+         14  |   .0883735   .0656238     1.35   0.178    -.0403244    .2170715
+         16  |  -.1432343    .337673    -0.42   0.671    -.8054605    .5189918
+         19  |  -.2096094   .0247704    -8.46   0.000    -.2581878   -.1610311
+         23  |   .0947107   .1294732     0.73   0.465    -.1592052    .3486266
+         24  |  -.0097533   .2949809    -0.03   0.974    -.5882542    .5687476
+             |
+        schl |   .0771688   .0077855     9.91   0.000     .0619003    .0924372
+       _cons |   9.383476   .1668631    56.23   0.000     9.056233    9.710719
+------------------------------------------------------------------------------
+
+. 
+. est store m2
+
+. 
+. 
+. 
+. * Model 3: full model
+
+. 
+. reg `outcome' `model_covariates', vce(robust)
+note: 138.socp_id omitted because of collinearity.
+note: 140.socp_id omitted because of collinearity.
+note: 147.socp_id omitted because of collinearity.
+note: 162.socp_id omitted because of collinearity.
+note: 225.socp_id omitted because of collinearity.
+note: 303.socp_id omitted because of collinearity.
+note: 380.socp_id omitted because of collinearity.
+note: 389.socp_id omitted because of collinearity.
+
+Linear regression                               Number of obs     =      2,029
+                                                F(407, 1473)      =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.5463
+                                                Root MSE          =     .57368
+
+------------------------------------------------------------------------------
+             |               Robust
+     ln_wage | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+        agep |   .0041911    .001473     2.85   0.004     .0013018    .0070804
+       2.sex |  -.1094674   .0405723    -2.70   0.007     -.189053   -.0298818
+             |
+       rac1p |
+          2  |   .1573814   .2329173     0.68   0.499    -.2995036    .6142664
+          3  |   .1265734   .2169599     0.58   0.560    -.2990099    .5521566
+          6  |   .1209468   .1146849     1.05   0.292    -.1040163    .3459098
+          8  |  -.2740984   .1616751    -1.70   0.090    -.5912363    .0430396
+          9  |   .0551789   .0690379     0.80   0.424    -.0802443     .190602
+             |
+        hisp |
+          2  |   .2867479   .1815292     1.58   0.114    -.0693354    .6428312
+          3  |   .0115838   .2125888     0.05   0.957    -.4054252    .4285928
+          4  |  -.2494426   .1770381    -1.41   0.159    -.5967163    .0978311
+          5  |  -.2925087   .2961367    -0.99   0.323    -.8734033    .2883858
+          6  |    -.25162   .2508311    -1.00   0.316    -.7436441    .2404042
+          9  |   .3453635   .3157852     1.09   0.274    -.2740731    .9648002
+         11  |   .0154429   .1625795     0.09   0.924    -.3034692    .3343549
+         13  |   1.849645   .2076959     8.91   0.000     1.442234    2.257056
+         14  |   .3819763     .21418     1.78   0.075    -.0381541    .8021067
+         16  |  -.2460595   .2296474    -1.07   0.284    -.6965302    .2044112
+         19  |   .1393811   .2308035     0.60   0.546    -.3133574    .5921196
+         23  |  -.1587288   .2433364    -0.65   0.514    -.6360516     .318594
+         24  |  -.1868083    .351753    -0.53   0.595    -.8767985    .5031818
+             |
+        schl |   .0294846   .0100929     2.92   0.004     .0096866    .0492826
+        wkhp |   .0105368   .0026693     3.95   0.000     .0053008    .0157727
+             |
+         cow |
+          2  |   .0578744   .0580309     1.00   0.319    -.0559575    .1717064
+          3  |   .1447359   .0933005     1.55   0.121    -.0382802     .327752
+          4  |   .0656098   .0832079     0.79   0.431    -.0976088    .2288285
+          5  |   .2709996    .142694     1.90   0.058    -.0089056    .5509048
+          6  |  -.7948806   .4538184    -1.75   0.080     -1.68508    .0953186
+          7  |  -.3263682   .1199376    -2.72   0.007    -.5616348   -.0911015
+          8  |  -1.564088   .3650016    -4.29   0.000    -2.280066   -.8481092
+             |
+         mar |
+          2  |  -.0351845    .129657    -0.27   0.786    -.2895166    .2191475
+          3  |   -.065207    .046495    -1.40   0.161    -.1564105    .0259964
+          4  |  -.2136802   .1280383    -1.67   0.095    -.4648371    .0374767
+          5  |  -.0983412   .0434222    -2.26   0.024    -.1835173   -.0131652
+             |
+   naicsp_id |
+        112  |   .2714916   .2063376     1.32   0.188    -.1332553    .6762384
+       1133  |   .0060539   .2265032     0.03   0.979    -.4382493    .4503571
+       113M  |   .0244803   .2776513     0.09   0.930    -.5201538    .5691144
+        115  |   .3003371    .290466     1.03   0.301    -.2694339    .8701081
+       2123  |   .7592505   .2876131     2.64   0.008     .1950757    1.323425
+      2211P  |   .5272255     .25321     2.08   0.037      .030535    1.023916
+      2212P  |    .656873   .2672594     2.46   0.014     .1326235    1.181123
+      22132  |    .052927   .2469446     0.21   0.830    -.4314736    .5373276
+      2213M  |   -.334313   .3143593    -1.06   0.288    -.9509526    .2823267
+         23  |   .2228156   .2570405     0.87   0.386    -.2813888    .7270201
+       3113  |   .3500476   .3146815     1.11   0.266     -.267224    .9673192
+       3114  |  -.1363871   .2976435    -0.46   0.647    -.7202374    .4474631
+       3115  |   .2507075   .2622914     0.96   0.339    -.2637969    .7652119
+       3116  |  -.4181773   .2757096    -1.52   0.130    -.9590026    .1226479
+     311811  |  -.1019931   .5147041    -0.20   0.843    -1.111624    .9076381
+      3118Z  |  -.4080792   .3003219    -1.36   0.174    -.9971833     .181025
+      311M1  |   .0539502   .4039133     0.13   0.894    -.7383563    .8462566
+      311M2  |   .6528337   .3273342     1.99   0.046     .0107429    1.294925
+       311S  |   .6371986   .2601111     2.45   0.014      .126971    1.147426
+       3121  |   .2582089   .3435467     0.75   0.452    -.4156841    .9321018
+       315M  |  -.0085086    .252793    -0.03   0.973    -.5043812    .4873641
+        31M  |  -.0784881   .2881234    -0.27   0.785    -.6436641    .4866879
+       3211  |   .1920493   .2849699     0.67   0.500    -.3669407    .7510394
+       3212  |    .088172   .2826783     0.31   0.755    -.4663229    .6426668
+     32199M  |   .1813445   .2675544     0.68   0.498    -.3434838    .7061727
+     3219Zm  |  -.0659963   .3281525    -0.20   0.841    -.7096923    .5776997
+       3221  |   .9424622    .285585     3.30   0.001     .3822655    1.502659
+       3231  |   .3010754   .2375908     1.27   0.205     -.164977    .7671278
+       3252  |  -.4116079   .2883426    -1.43   0.154    -.9772138    .1539979
+       3253  |    .486245   .2270482     2.14   0.032     .0408727    .9316174
+       3254  |    .033522   .2566587     0.13   0.896    -.4699334    .5369774
+       3256  |   .0853336   .3121772     0.27   0.785    -.5270256    .6976928
+       325M  |  -1.700526   .3107829    -5.47   0.000     -2.31015   -1.090902
+       3261  |   .0299727   .3429996     0.09   0.930    -.6428471    .7027924
+      3262M  |   .6274641   .3112874     2.02   0.044     .0168501    1.238078
+      32711  |   .4911951   .2935621     1.67   0.094    -.0846493    1.067039
+      32712  |   .0147435   .3194119     0.05   0.963    -.6118072    .6412941
+       3272  |   .2636361   .3369351     0.78   0.434    -.3972877    .9245599
+       3279  |   .3008822   .3138924     0.96   0.338    -.3148415    .9166059
+       3313  |    2.08626   .2482377     8.40   0.000     1.599323    2.573196
+       3314  |  -.6364902   .2440269    -2.61   0.009    -1.115168   -.1578129
+       3315  |   .3129336   .2531294     1.24   0.217    -.1835989     .809466
+       3321  |   .5944806   .3613738     1.65   0.100    -.1143815    1.303343
+       3322  |  -.4109328    .331887    -1.24   0.216    -1.061954    .2400887
+       3327  |   .6996332    .252429     2.77   0.006     .2044746    1.194792
+       332M  |  -.1401048     .36795    -0.38   0.703    -.8618665    .5816569
+      332Mz  |  -.0588808   .5081435    -0.12   0.908    -1.055643    .9378811
+       3333  |   .8778723   .3104503     2.83   0.005     .2689005    1.486844
+       3335  |   .3293842   .3009809     1.09   0.274    -.2610126    .9197811
+      333Ms  |   .1497827   .2444473     0.61   0.540    -.3297193    .6292847
+       3341  |   .5809654   .3220413     1.80   0.071     -.050743    1.212674
+       3345  |   .8079497   .3953536     2.04   0.041     .0324337    1.583466
+      334M2  |   .4722183    .304786     1.55   0.122    -.1256424    1.070079
+       3352  |   -.514371   .3104887    -1.66   0.098    -1.123418    .0946762
+       335M  |   .2856542   .2658246     1.07   0.283    -.2357809    .8070893
+    33641M1  |   .5112993   .2436225     2.10   0.036     .0334153    .9891833
+       336M  |   .6303991   .3075914     2.05   0.041     .0270352    1.233763
+        337  |   .0178177   .2890341     0.06   0.951    -.5491447    .5847801
+       3391  |   .3217748    .265008     1.21   0.225    -.1980585     .841608
+      3399M  |   .5569675    .480929     1.16   0.247    -.3864111    1.500346
+     3399Zm  |   .5139083   .3213504     1.60   0.110    -.1164448    1.144262
+        3Ms  |    .030921   .3394437     0.09   0.927    -.6349237    .6967656
+       4231  |  -.0617811   .3101984    -0.20   0.842    -.6702588    .5466965
+       4234  |   .7255551   .2931546     2.47   0.013     .1505103      1.3006
+       4236  |   .2402365    .585165     0.41   0.681     -.907609    1.388082
+       4237  |   .6888622   .3770353     1.83   0.068    -.0507211    1.428445
+       4238  |   .6698992   .4242294     1.58   0.115    -.1622588    1.502057
+      42393  |  -.8099695   .2533079    -3.20   0.001    -1.306852   -.3130869
+      4239Z  |   .0515281   .3186237     0.16   0.872    -.5734765    .6765327
+       4243  |  -.1811507    .250907    -0.72   0.470    -.6733238    .3110224
+       4244  |   .2856821   .3181089     0.90   0.369    -.3383126    .9096767
+       4245  |   -.381524   .4148856    -0.92   0.358    -1.195353    .4323055
+       4247  |   .4762523   .2811764     1.69   0.091    -.0752966    1.027801
+      4249Z  |   .0898486   .2887471     0.31   0.756    -.4765506    .6562479
+       424M  |   2.256106   .3714671     6.07   0.000     1.527445    2.984767
+        42S  |   .1882394   .4971006     0.38   0.705     -.786861     1.16334
+       4411  |  -.2553291   .3677845    -0.69   0.488    -.9767663    .4661081
+       4412  |   .4404055   .3804078     1.16   0.247    -.3057933    1.186604
+       4413  |  -.5606904   .3706676    -1.51   0.131    -1.287783    .1664023
+      44414  |   .0165399   .2328795     0.07   0.943    -.4402709    .4733507
+      4441Z  |   .0600581    .239159     0.25   0.802    -.4090705    .5291866
+       4442  |  -.1229777   .2854342    -0.43   0.667    -.6828785     .436923
+      44511  |  -.1772217   .2456977    -0.72   0.471    -.6591764    .3047331
+      44513  |  -.0715559   .3364375    -0.21   0.832    -.7315035    .5883918
+       4452  |  -.1995823   .3952283    -0.50   0.614    -.9748526     .575688
+       4453  |  -.3293902   .2448204    -1.35   0.179     -.809624    .1508436
+       4491  |   .1020624   .2174179     0.47   0.639    -.3244193     .528544
+       4492  |   .3833844   .4180976     0.92   0.359    -.4367458    1.203515
+       4551  |  -.5585714   .2727084    -2.05   0.041     -1.09351   -.0236333
+       4552  |  -.0253794   .2807898    -0.09   0.928    -.5761698     .525411
+      45611  |   .0128234   .2647283     0.05   0.961    -.5064612     .532108
+      4561Z  |   .3556744   .3286315     1.08   0.279    -.2889612     1.00031
+       4571  |  -.7225248   .5874834    -1.23   0.219    -1.874918    .4298684
+       4572  |   .0163683   .2679792     0.06   0.951    -.5092932    .5420297
+       4581  |  -.7807189   .5625219    -1.39   0.165    -1.884148    .3227105
+      4591M  |  -.1943151   .2599898    -0.75   0.455    -.7043048    .3156745
+      45921  |  -.4980788   .2546345    -1.96   0.051    -.9975637    .0014061
+      45942  |  -.4187894   .3551394    -1.18   0.238    -1.115422    .2778435
+       4595  |  -.8202037   .2981876    -2.75   0.006    -1.405121   -.2352861
+       4599  |  -.0733172   .2399108    -0.31   0.760    -.5439204     .397286
+        481  |   1.279996   .3527607     3.63   0.000     .5880288    1.971962
+        482  |   .7625804   .4218877     1.81   0.071    -.0649844    1.590145
+        483  |   .1528762   .2952265     0.52   0.605     -.426233    .7319855
+        484  |   .2613914   .2472907     1.06   0.291     -.223688    .7464709
+       485M  |  -.0951108    .254579    -0.37   0.709    -.5944868    .4042653
+        486  |   .1292324   .2273863     0.57   0.570    -.3168031    .5752679
+        488  |   .1722344   .2243005     0.77   0.443    -.2677481    .6122168
+        491  |  -.1470242   .2830845    -0.52   0.604    -.7023159    .4082674
+        492  |   .3535943   .4012278     0.88   0.378    -.4334444    1.140633
+        493  |   .8034318   .3288851     2.44   0.015     .1582989    1.448565
+        4Ms  |  -1.125162   .6016239    -1.87   0.062    -2.305293    .0549686
+       5121  |   .4130871   .2934358     1.41   0.159    -.1625093    .9886836
+      51311  |  -.2331648   .3072034    -0.76   0.448    -.8357676     .369438
+      5131Z  |   -.033768   .2793674    -0.12   0.904    -.5817684    .5142323
+       5132  |   .4317852   .3111429     1.39   0.165    -.1785452    1.042116
+        516  |  -.0582523   .3324459    -0.18   0.861      -.71037    .5938655
+     517111  |   .6173244   .4212239     1.47   0.143    -.2089382    1.443587
+       517Z  |   .6063108   .3173715     1.91   0.056    -.0162374    1.228859
+       5182  |   .0689433   .3524538     0.20   0.845    -.6224215    .7603082
+      51921  |  -.5013075   .2448235    -2.05   0.041    -.9815474   -.0210676
+      5221M  |  -.2838836   .3612343    -0.79   0.432     -.992472    .4247048
+       522M  |   .7051261   .4135785     1.70   0.088    -.1061395    1.516392
+       5241  |   .2855736   .2666566     1.07   0.284    -.2374934    .8086407
+       5242  |   .3484146   .3728555     0.93   0.350    -.3829697    1.079799
+       52M2  |   .6854513   .3716768     1.84   0.065    -.0436209    1.414524
+       52M3  |   .0791284   .2974359     0.27   0.790    -.5043146    .6625714
+       5313  |   -.131791   .2767782    -0.48   0.634    -.6747125    .4111305
+       531M  |   .1775512   .2732473     0.65   0.516     -.358444    .7135464
+        53M  |  -.7957911   .3622311    -2.20   0.028    -1.506335   -.0852473
+       5411  |   .0873318   .3058795     0.29   0.775    -.5126741    .6873377
+       5412  |   .0162277   .4975442     0.03   0.974    -.9597429    .9921983
+       5413  |   .2072397   .2625717     0.79   0.430    -.3078145    .7222939
+       5414  |   .3102749   .3117303     1.00   0.320    -.3012078    .9217575
+       5415  |    .327869   .2378193     1.38   0.168    -.1386316    .7943696
+       5416  |   .3551276   .2710769     1.31   0.190    -.1766103    .8868655
+       5417  |   .1587595   .4290301     0.37   0.711    -.6828155    1.000334
+       5418  |   .3091936   .4371191     0.71   0.479    -.5482487    1.166636
+      54194  |  -.3234682   .3616469    -0.89   0.371    -1.032866    .3859297
+      5419Z  |   .3310703   .3904759     0.85   0.397    -.4348778    1.097018
+         55  |   .5402524   .2455938     2.20   0.028     .0585016    1.022003
+       5613  |   .3632196   .4124081     0.88   0.379      -.44575    1.172189
+       5614  |  -.5795967   .2830016    -2.05   0.041    -1.134726   -.0244676
+       5615  |  -.0135124   .3146053    -0.04   0.966    -.6306346    .6036097
+       5616  |   .1941114   .2358401     0.82   0.411    -.2685067    .6567296
+      56173  |  -.7243382   .5621983    -1.29   0.198    -1.827133    .3784564
+      5617Z  |   .1801874   .2517908     0.72   0.474    -.3137193    .6740941
+       561M  |  -.1227001   .3489952    -0.35   0.725    -.8072806    .5618805
+        562  |   .1897539   .2602589     0.73   0.466    -.3207637    .7002714
+       6111  |  -.2804337   .2468658    -1.14   0.256    -.7646797    .2038123
+      611M1  |   .0105124    .234633     0.04   0.964     -.449738    .4707627
+      611M2  |  -.1238317   .2777985    -0.45   0.656    -.6687545    .4210911
+      611M3  |  -.1122963   .2505327    -0.45   0.654    -.6037352    .3791425
+       6211  |   .2019436   .2892579     0.70   0.485    -.3654577    .7693448
+       6212  |    .531967   .3867933     1.38   0.169    -.2267575    1.290691
+      62132  |   .0227284   .2375585     0.10   0.924    -.4432607    .4887175
+     6213Zm  |   .0195282   .2909798     0.07   0.947    -.5512507    .5903071
+       6214  |   .0796274    .248872     0.32   0.749    -.4085539    .5678086
+       6216  |   .6138848   .4882834     1.26   0.209    -.3439202     1.57169
+       621M  |   .3740086   .2842505     1.32   0.188    -.1835702    .9315874
+       6222  |  -.1800493   .3134356    -0.57   0.566    -.7948771    .4347784
+       622M  |   .0698801   .2364856     0.30   0.768    -.3940044    .5337645
+       6231  |   .0115576   .2839277     0.04   0.968    -.5453881    .5685033
+       623M  |  -.0326818   .3332871    -0.10   0.922    -.6864498    .6210862
+       6241  |   .1569432   .2812143     0.56   0.577      -.39468    .7085664
+       6242  |  -.0089464   .2709193    -0.03   0.974    -.5403751    .5224822
+       6243  |   .1672336   .2676215     0.62   0.532    -.3577262    .6921934
+       6244  |  -.4990152   .2769501    -1.80   0.072    -1.042274    .0442433
+       7111  |  -.7051338   .9510967    -0.74   0.459    -2.570782    1.160514
+       7115  |  -.3505464   1.030583    -0.34   0.734    -2.372112    1.671019
+       711M  |  -.7255697   .6986666    -1.04   0.299    -2.096057    .6449179
+        712  |   -.180168   .2911666    -0.62   0.536    -.7513134    .3909774
+       713Z  |     .00942   .2465226     0.04   0.970    -.4741528    .4929927
+       7211  |   .1199685   .2833632     0.42   0.672      -.43587     .675807
+       721M  |   .1147612   .2538469     0.45   0.651    -.3831788    .6127012
+       722Z  |   .0090988   .2904569     0.03   0.975    -.5606544    .5788521
+     811192  |   .9732168   .5364013     1.81   0.070     -.078975    2.025409
+      8111Z  |  -.3016396   .3398052    -0.89   0.375    -.9681933     .364914
+       8112  |    .144714   .2506266     0.58   0.564     -.346909     .636337
+       8113  |   .7611426   .4201765     1.81   0.070    -.0630655    1.585351
+       8114  |   1.043853   .9844497     1.06   0.289    -.8872194    2.974926
+     812112  |   .0934955   .4429305     0.21   0.833    -.7753462    .9623372
+      8121M  |  -.4731248    .302836    -1.56   0.118    -1.067161     .120911
+       8122  |  -.1841073   .3244668    -0.57   0.571    -.8205734    .4523589
+       8129  |   1.548074   .3391334     4.56   0.000     .8828384     2.21331
+       8131  |    .646142   .2678583     2.41   0.016     .1207177    1.171566
+      8139Z  |  -.6505805   .2751912    -2.36   0.018    -1.190389   -.1107721
+       813M  |   .0076311   .2652626     0.03   0.977    -.5127016    .5279638
+        814  |  -2.977095    .535534    -5.56   0.000    -4.027585   -1.926604
+      92113  |  -.5436711   .2874237    -1.89   0.059    -1.107474    .0201324
+      92119  |   .5214571   .2979861     1.75   0.080    -.0630653     1.10598
+     9211Mp  |   .0108511   .2570409     0.04   0.966    -.4933541    .5150564
+        923  |   .1101309   .2498819     0.44   0.659    -.3800314    .6002931
+      9281P  |  -.0438654   .3310946    -0.13   0.895    -.6933326    .6056018
+       92M1  |  -.1899747   .2547152    -0.75   0.456    -.6896178    .3096683
+       92M2  |  -.2536559   .3188765    -0.80   0.426    -.8791563    .3718446
+       92Mp  |   .1445814   .2644076     0.55   0.585    -.3740742    .6632369
+             |
+     socp_id |
+     1110Xx  |   .9144477   .2050099     4.46   0.000     .5123052     1.31659
+     112011  |   .0867951   .4190176     0.21   0.836    -.7351397    .9087299
+     112021  |   .3305302   .2588784     1.28   0.202    -.1772795    .8383399
+     112022  |   .7590363    .462452     1.64   0.101    -.1480983    1.666171
+     112030  |   .0801036   .2394383     0.33   0.738    -.3895727    .5497799
+     113012  |    .326686   .3353138     0.97   0.330    -.3310573    .9844294
+     113013  |   .3444443   .2246469     1.53   0.125    -.0962175    .7851062
+     113021  |   .5020048   .2427256     2.07   0.039     .0258801    .9781295
+     113031  |   .2839893    .237065     1.20   0.231    -.1810316    .7490102
+     113051  |  -.1185703   .2484777    -0.48   0.633    -.6059782    .3688375
+     113061  |   .2033104   .3662092     0.56   0.579    -.5150367    .9216575
+     113071  |   .0906708   .2243482     0.40   0.686    -.3494052    .5307467
+     113121  |    .405071   .2437332     1.66   0.097    -.0730301    .8831721
+     119013  |   -.055192   .3224501    -0.17   0.864    -.6877024    .5773183
+     119021  |   .0884995   .2925626     0.30   0.762    -.4853843    .6623833
+     119030  |   .4536368   .2203823     2.06   0.040     .0213402    .8859334
+     119041  |   1.071025   .4875175     2.20   0.028     .1147221    2.027327
+     119051  |  -.2296506   .3496715    -0.66   0.511    -.9155578    .4562566
+     119070  |   .4195579   .2073253     2.02   0.043     .0128735    .8262422
+     119081  |   .0904015   .3243424     0.28   0.780    -.5458208    .7266237
+     119111  |   .2388779   .2393736     1.00   0.318    -.2306716    .7084274
+     119141  |   .0163231   .3212775     0.05   0.959    -.6138871    .6465332
+     119151  |   .2230979   .2186176     1.02   0.308    -.2057371     .651933
+     119161  |   .3015793   .1902204     1.59   0.113    -.0715525    .6747112
+     1191Xx  |   .1615386    .198603     0.81   0.416    -.2280362    .5511135
+     131022  |   .2869016   .2016759     1.42   0.155    -.1087009    .6825041
+     131023  |  -.2501673   .2220506    -1.13   0.260    -.6857364    .1854018
+     131030  |   .0376542    .228886     0.16   0.869    -.4113229    .4866314
+     131041  |   .0464697   .2386108     0.19   0.846    -.4215835     .514523
+     131051  |   .5955717   .2631403     2.26   0.024     .0794021    1.111741
+     131070  |  -.0984407   .2495872    -0.39   0.693    -.5880248    .3911435
+     131081  |  -.3379264   .3304595    -1.02   0.307    -.9861478    .3102949
+     131082  |   .1334372   .2093679     0.64   0.524    -.2772538    .5441282
+     131111  |   .4873584   .2789017     1.75   0.081    -.0597284    1.034445
+     131131  |   .9262898   .1938448     4.78   0.000     .5460486    1.306531
+     131141  |   .1735802     .21087     0.82   0.411    -.2400573    .5872177
+     131151  |  -.0053732   .2635695    -0.02   0.984    -.5223849    .5116384
+     131161  |   .4322691   .1997973     2.16   0.031     .0403515    .8241868
+     131199  |   .0705334   .2244747     0.31   0.753    -.3697907    .5108576
+     132011  |   .7143007   .2988367     2.39   0.017     .1281099    1.300491
+     132051  |   .2473625    .210434     1.18   0.240    -.1654197    .6601447
+     132052  |   1.121574   .3280173     3.42   0.001     .4781436    1.765005
+     132070  |  -.8955545   .5570802    -1.61   0.108    -1.988309    .1972005
+     132081  |   .9414499    .281085     3.35   0.001     .3900803    1.492819
+     132082  |   .8548132   .4854707     1.76   0.078    -.0974743    1.807101
+     151211  |    .315224   .2214889     1.42   0.155    -.1192432    .7496913
+     151212  |  -.0011638   .2175979    -0.01   0.996    -.4279985    .4256708
+     151230  |  -.0087731   .2783537    -0.03   0.975     -.554785    .5372389
+     151241  |   .2566961   .3173622     0.81   0.419    -.3658339    .8792262
+     151244  |   .2067864   .2103503     0.98   0.326    -.2058316    .6194044
+     15124X  |   .1574496    .318434     0.49   0.621    -.4671829     .782082
+     151251  |   .4828752    .333278     1.45   0.148    -.1708749    1.136625
+     151252  |   .3559946   .1941224     1.83   0.067    -.0247911    .7367803
+     151254  |   .4015669   .4351641     0.92   0.356    -.4520405    1.255174
+     151255  |   .9462075   .2348485     4.03   0.000     .4855344    1.406881
+     151299  |  -.0114659   .2143214    -0.05   0.957    -.4318735    .4089418
+     152031  |   .6362982   .2754234     2.31   0.021     .0960343    1.176562
+     1520Xx  |   .2892092   .3822523     0.76   0.449    -.4606076    1.039026
+     171011  |   .2387789   .2657225     0.90   0.369     -.282456    .7600139
+     171012  |   .1280586   .3198831     0.40   0.689    -.4994165    .7555336
+     172011  |    .186374   .2118732     0.88   0.379    -.2292313    .6019794
+     172041  |   .4307154    .282693     1.52   0.128    -.1238084    .9852391
+     172051  |   .1741447    .246492     0.71   0.480     -.309368    .6576575
+     172070  |   .6308721   .2479154     2.54   0.011     .1445672    1.117177
+     172081  |   .6927593   .3284899     2.11   0.035     .0484014    1.337117
+     172110  |   .2111689   .2201773     0.96   0.338    -.2207255    .6430632
+     172131  |  -.4935368   .1743648    -2.83   0.005    -.8355666    -.151507
+     172141  |   .3377503   .3211598     1.05   0.293     -.292229    .9677295
+     1721Yy  |   .1826897   .2333644     0.78   0.434    -.2750723    .6404517
+     17301X  |  -.1061126   .3270589    -0.32   0.746    -.7476634    .5354383
+     173023  |   -.458704   .2811191    -1.63   0.103     -1.01014    .0927324
+     17302X  |  -.1425489   .3290441    -0.43   0.665    -.7879939    .5028961
+     173031  |  -.3796458   .2903303    -1.31   0.191    -.9491506    .1898591
+     191020  |   .1806524   .1913906     0.94   0.345    -.1947748    .5560797
+     191030  |  -.1167178   .3416846    -0.34   0.733    -.7869581    .5535225
+     1910Xx  |   .3298002   .1919773     1.72   0.086    -.0467779    .7063783
+     192010  |   1.101729   .3278643     3.36   0.001     .4585987     1.74486
+     192030  |   .3424359   .2596608     1.32   0.187    -.1669084    .8517801
+     192041  |   .4014121   .3499061     1.15   0.251    -.2849552    1.087779
+     192099  |  -.0991401   .4980309    -0.20   0.842    -1.076066    .8777853
+     193034  |   .1427918   .3723169     0.38   0.701    -.5875361    .8731197
+     19303X  |    .278847   .2296251     1.21   0.225    -.1715801    .7292741
+     193051  |   .0891595    .221851     0.40   0.688    -.3460181     .524337
+     194010  |   -.722091   .8308676    -0.87   0.385    -2.351901    .9077187
+     1940Yy  |   -.629013   .4585214    -1.37   0.170    -1.528437    .2704114
+     195010  |   .1571294   .2391693     0.66   0.511    -.3120194    .6262781
+     211011  |   -.228543    .297052    -0.77   0.442    -.8112329     .354147
+     211012  |   .1375227    .225921     0.61   0.543    -.3056384    .5806838
+     211013  |  -.3726104   .2312203    -1.61   0.107    -.8261665    .0809457
+     211014  |   .0967866   .2590965     0.37   0.709    -.4114509     .605024
+     211015  |  -.2169293   .2336904    -0.93   0.353    -.6753307    .2414721
+     211019  |  -.1261214   .2652774    -0.48   0.635    -.6464832    .3942404
+     211021  |  -.2708139   .2326329    -1.16   0.245    -.7271409    .1855131
+     211022  |  -.2936199   .4618334    -0.64   0.525    -1.199541    .6123012
+     211029  |  -.0772307   .2141488    -0.36   0.718    -.4972999    .3428385
+     211092  |    .331955   .2312318     1.44   0.151    -.1216238    .7855338
+     211093  |   .1034118   .2218311     0.47   0.641    -.3317266    .5385503
+     212011  |   -1.06189   .3162229    -3.36   0.001    -1.682185   -.4415948
+     2310Xx  |    .126159    .347665     0.36   0.717    -.5558121    .8081302
+     232011  |  -.0879727   .2544628    -0.35   0.730    -.5871208    .4111754
+     251000  |   .1750003   .2175007     0.80   0.421    -.2516439    .6016445
+     252010  |    .047031   .2423921     0.19   0.846    -.4284394    .5225015
+     252020  |   .1307859   .2146445     0.61   0.542    -.2902555    .5518273
+     252030  |   .2897569   .2014464     1.44   0.151    -.1053955    .6849092
+     252050  |   .2623366   .2069139     1.27   0.205    -.1435408    .6682139
+     2530Xx  |   .1633299   .2806347     0.58   0.561    -.3871564    .7138162
+     254010  |   .0853125    .247465     0.34   0.730    -.4001089    .5707339
+     254022  |   .3418838   .1940028     1.76   0.078    -.0386675    .7224351
+     259040  |   -.483988   .2326964    -2.08   0.038    -.9404397   -.0275363
+     2590Xx  |  -.3704932   .3722929    -1.00   0.320    -1.100774    .3597875
+     271010  |   1.631897    1.13001     1.44   0.149    -.5847027    3.848497
+     271024  |   .2349077   .2749345     0.85   0.393    -.3043972    .7742127
+     27102X  |   .1305054   .2891043     0.45   0.652    -.4365945    .6976053
+     272012  |   .0740556   .4957436     0.15   0.881     -.898383    1.046494
+     272022  |  -.2905308   .2435807    -1.19   0.233    -.7683327    .1872712
+     272042  |    .740067   .9922426     0.75   0.456    -1.206292    2.686426
+     273023  |          0  (omitted)
+     273031  |  -.1859777   .2326982    -0.80   0.424    -.6424329    .2704775
+     273041  |          0  (omitted)
+     273042  |  -.0736386   .2319307    -0.32   0.751    -.5285882     .381311
+     273043  |   .1865991   .5519936     0.34   0.735    -.8961781    1.269376
+     273091  |   .2117357    .196998     1.07   0.283    -.1746908    .5981623
+     273099  |    .178208   .2106053     0.85   0.398    -.2349102    .5913262
+     274021  |  -1.042213   .2072805    -5.03   0.000     -1.44881   -.6356169
+     274030  |   1.111852   .3115079     3.57   0.000     .5008056    1.722898
+     2740Xx  |          0  (omitted)
+     291020  |  -1.147733   1.826656    -0.63   0.530    -4.730856    2.435391
+     291031  |   .1930305   .1868854     1.03   0.302    -.1735593    .5596203
+     291051  |   .3302207   .3576071     0.92   0.356    -.3712527    1.031694
+     291071  |   .6282471   .2118713     2.97   0.003     .2126456    1.043849
+     291081  |  -.1300843   .2533515    -0.51   0.608    -.6270524    .3668838
+     291122  |   .1242587   .1903142     0.65   0.514     -.249057    .4975744
+     291123  |  -.0172225   .2446269    -0.07   0.944    -.4970767    .4626318
+     291126  |   .0649444   .2786136     0.23   0.816    -.4815773    .6114662
+     291127  |   .0606805    .390137     0.16   0.876    -.7046028    .8259638
+     29112X  |  -.0698587   .2318832    -0.30   0.763    -.5247151    .3849977
+     291131  |   .9552144    .310273     3.08   0.002     .3465903    1.563838
+     291141  |   .3498892   .1917602     1.82   0.068     -.026263    .7260415
+     2911Xx  |   .1653528   .4453438     0.37   0.710    -.7082227    1.038928
+     291210  |   .8959304   .3112385     2.88   0.004     .2854126    1.506448
+     291240  |          0  (omitted)
+     291291  |  -4.138786   .2436689   -16.99   0.000    -4.616761   -3.660811
+     291292  |  -.3975422   .3910272    -1.02   0.309    -1.164572    .3694873
+     291299  |   .5089647   .2456549     2.07   0.038      .027094    .9908354
+     292010  |   .2353293   .2298989     1.02   0.306    -.2156347    .6862933
+     292032  |   .2548324   .3253591     0.78   0.434     -.383384    .8930489
+     292034  |   .5393094   .2783497     1.94   0.053    -.0066946    1.085313
+     292035  |   .3631848   .1976062     1.84   0.066    -.0244347    .7508044
+     29203X  |    2.44581   .2908897     8.41   0.000     1.875207    3.016412
+     292042  |  -.2699988   .2193082    -1.23   0.218    -.7001885     .160191
+     292043  |  -.5210548   .2527684    -2.06   0.039    -1.016879   -.0252304
+     292052  |  -.1994321   .2789311    -0.71   0.475    -.7465765    .3477123
+     292053  |  -.2399214   .2146358    -1.12   0.264    -.6609458    .1811029
+     292056  |   .5582093   .4078792     1.37   0.171    -.2418767    1.358295
+     292061  |    .282838   .2557348     1.11   0.269    -.2188052    .7844812
+     292072  |  -.1757682   .2398136    -0.73   0.464    -.6461807    .2946443
+     292090  |  -1.102345   .2015255    -5.47   0.000    -1.497652   -.7070372
+     299000  |   .0091369   .2780841     0.03   0.974    -.5363462      .55462
+     311121  |  -.8607886   .4926229    -1.75   0.081    -1.827106    .1055286
+     311122  |  -.9088002   .4607374    -1.97   0.049    -1.812572   -.0050288
+     311131  |  -.3088331    .295397    -1.05   0.296    -.8882767    .2706104
+     319011  |   .3994486   .3626196     1.10   0.271    -.3118572    1.110754
+     319091  |  -.5200275    .395006    -1.32   0.188    -1.294862    .2548066
+     319097  |  -.3086897   .3000711    -1.03   0.304     -.897302    .2799225
+     31909X  |  -.1256191   .2434936    -0.52   0.606    -.6032503     .352012
+     331090  |   .1720392   .2329564     0.74   0.460    -.2849224    .6290009
+     332011  |  -.7767907   .8408487    -0.92   0.356    -2.426179    .8725977
+     333012  |    .280484    .272105     1.03   0.303    -.2532706    .8142387
+     333021  |   .1066207   .2868687     0.37   0.710    -.4560939    .6693353
+     333050  |   .0727295   .2464125     0.30   0.768    -.4106272    .5560863
+     3330Xx  |   -.033129   .2296119    -0.14   0.885    -.4835302    .4172722
+     339021  |   .2775001   .3597756     0.77   0.441     -.428227    .9832271
+     339030  |  -.2388259   .2378131    -1.00   0.315    -.7053143    .2276626
+     339091  |  -.2706725   .2295572    -1.18   0.239    -.7209663    .1796212
+     33909X  |  -.3449907   .2685359    -1.28   0.199    -.8717442    .1817629
+     351011  |   -.172902   .2451162    -0.71   0.481    -.6537161     .307912
+     351012  |  -.1718142   .2974108    -0.58   0.564     -.755208    .4115797
+     352010  |   -.342811    .236776    -1.45   0.148    -.8072651    .1216432
+     352021  |  -.7874178   .3007409    -2.62   0.009    -1.377344   -.1974917
+     353011  |  -.8183968   .3746168    -2.18   0.029    -1.553236   -.0835576
+     353023  |  -1.430051   .2041351    -7.01   0.000    -1.830477   -1.029624
+     353031  |  -.1025897   .4949495    -0.21   0.836    -1.073471    .8682913
+     359011  |  -.9809643   .2668427    -3.68   0.000    -1.504397    -.457532
+     359021  |  -.2614118    .330436    -0.79   0.429     -.909587    .3867634
+     371011  |   -.336087   .2075573    -1.62   0.106    -.7432262    .0710523
+     371012  |  -.3240776   .3090027    -1.05   0.294    -.9302098    .2820546
+     372012  |  -.4904065   .2345306    -2.09   0.037    -.9504561   -.0303569
+     37201X  |  -.2741504   .1898159    -1.44   0.149    -.6464887    .0981878
+     372021  |   .6193507   .2409945     2.57   0.010     .1466216     1.09208
+     373011  |  -.3805066   .6226754    -0.61   0.541    -1.601932    .8409184
+     373013  |   1.288306   .8225765     1.57   0.118    -.3252402    2.901852
+     392011  |  -2.305538   .3657988    -6.30   0.000     -3.02308   -1.587996
+     392021  |  -.4725879   .3915229    -1.21   0.228     -1.24059     .295414
+     3930Xx  |   .0904316   .1817936     0.50   0.619    -.2661704    .4470335
+     394031  |     .30489   .3051479     1.00   0.318    -.2936807    .9034606
+     395012  |          0  (omitted)
+     397010  |  -.1154486   .3038649    -0.38   0.704    -.7115025    .4806053
+     399011  |   2.174318   .2759453     7.88   0.000      1.63303    2.715605
+     399031  |  -.1348345    .265361    -0.51   0.611    -.6553601    .3856911
+     399032  |   -.623125   .5911008    -1.05   0.292    -1.782614     .536364
+     399041  |  -.7146009   .2499212    -2.86   0.004     -1.20484   -.2243616
+     399099  |  -.7544926   .2334777    -3.23   0.001    -1.212477   -.2965084
+     411011  |   .3385665   .2092656     1.62   0.106    -.0719239    .7490569
+     411012  |   .3639868   .2060381     1.77   0.078    -.0401727    .7681462
+     412010  |   -.298623   .2484284    -1.20   0.230    -.7859342    .1886882
+     412022  |   .2729169   .3538365     0.77   0.441    -.4211602    .9669941
+     412031  |  -.0184568   .2615232    -0.07   0.944    -.5314543    .4945407
+     413011  |   .4903097   .2180511     2.25   0.025     .0625859    .9180336
+     413021  |  -.0866851    .373583    -0.23   0.817    -.8194965    .6461262
+     413031  |   .0828984   .3463842     0.24   0.811    -.5965605    .7623573
+     413041  |   .0279087   .2813125     0.10   0.921     -.523907    .5797245
+     413091  |   .4524719    .334145     1.35   0.176    -.2029789    1.107923
+     414010  |  -.3533892   .3831765    -0.92   0.357    -1.105019    .3982406
+     419020  |   .6313777   .2912063     2.17   0.030     .0601544    1.202601
+     419099  |  -.5074265   .3947486    -1.29   0.199    -1.281756    .2669029
+     431011  |   -.092168   .2004439    -0.46   0.646    -.4853539    .3010178
+     433011  |  -.2062311   .2760841    -0.75   0.455     -.747791    .3353288
+     433021  |  -.3283053   .3651519    -0.90   0.369    -1.044578    .3879678
+     433031  |  -.3511195   .2771343    -1.27   0.205    -.8947394    .1925004
+     433071  |  -.1439629   .3889232    -0.37   0.711    -.9068652    .6189394
+     4330Xx  |   .1019468   .2857798     0.36   0.721     -.458632    .6625255
+     434031  |  -.0216821   .2225156    -0.10   0.922    -.4581634    .4147991
+     434041  |   .0338075   .2680456     0.13   0.900    -.4919842    .5595992
+     434051  |  -.1963923   .2687892    -0.73   0.465    -.7236427    .3308582
+     434061  |   .2597619   .2082181     1.25   0.212    -.1486738    .6681975
+     434071  |   .1411326   .2865485     0.49   0.622    -.4209541    .7032193
+     434111  |   .0662172   .2280352     0.29   0.772    -.3810911    .5135255
+     434131  |  -1.203829    .264765    -4.55   0.000    -1.723186   -.6844723
+     434161  |   .4522643   .1864367     2.43   0.015     .0865546     .817974
+     434171  |  -.3700482   .3453651    -1.07   0.284    -1.047508    .3074117
+     434181  |  -1.833515   .3199981    -5.73   0.000    -2.461216   -1.205815
+     434Xxx  |  -.9395198   .4837509    -1.94   0.052    -1.888434    .0093943
+     435021  |   .2788046   .3871392     0.72   0.472    -.4805982    1.038207
+     435031  |  -.0749728   .2276519    -0.33   0.742    -.5215293    .3715837
+     435032  |  -.4038055   .3889059    -1.04   0.299    -1.166674    .3590629
+     435041  |   .3786074   .2922095     1.30   0.195    -.1945836    .9517984
+     435051  |    .090464   .2669242     0.34   0.735    -.4331281     .614056
+     435052  |   .0045324   .2153839     0.02   0.983    -.4179594    .4270243
+     435053  |   .0930353   .3118546     0.30   0.765    -.5186912    .7047619
+     435061  |   .4435998   .2067156     2.15   0.032     .0381115    .8490882
+     435071  |  -.5711298   .3793747    -1.51   0.132    -1.315302    .1730424
+     435111  |   .1854236   .3827242     0.48   0.628     -.565319    .9361662
+     436011  |   .2787193   .2446145     1.14   0.255    -.2011106    .7585493
+     436013  |  -.1787121   .1894304    -0.94   0.346    -.5502943      .19287
+     436014  |  -.1362785   .2018217    -0.68   0.500    -.5321669      .25961
+     439021  |  -.1258611   .2686907    -0.47   0.640    -.6529182     .401196
+     439051  |  -1.167881   .2375561    -4.92   0.000    -1.633865    -.701897
+     439061  |   .0460584   .3098031     0.15   0.882    -.5616439    .6537607
+     439111  |   .1498562   .4702354     0.32   0.750    -.7725462    1.072258
+     439Xxx  |   -.436292    .297762    -1.47   0.143    -1.020375    .1477907
+     451011  |   .2295912   .3232103     0.71   0.478    -.4044103    .8635926
+     4520Xx  |  -.3748855   .3306969    -1.13   0.257    -1.023573    .2738015
+     471011  |   .1763389   .2514928     0.70   0.483    -.3169832    .6696611
+     472031  |  -.1333881   .2655209    -0.50   0.615    -.6542275    .3874513
+     472040  |   .3957561     .48362     0.82   0.413    -.5529012    1.344413
+     472061  |  -.4061011    .301208    -1.35   0.178    -.9969434    .1847412
+     472070  |   .0831412   .2780272     0.30   0.765    -.4622302    .6285127
+     472080  |          0  (omitted)
+     472111  |   .3414652   .3797361     0.90   0.369     -.403416    1.086346
+     472130  |   .3766578   .3996149     0.94   0.346     -.407217    1.160533
+     472140  |   .0434772   .2610909     0.17   0.868    -.4686725    .5556268
+     472152  |  -.0086771   .2508002    -0.03   0.972    -.5006407    .4832865
+     472181  |  -.0993469   .2690889    -0.37   0.712    -.6271852    .4284914
+     472211  |  -.2455788   .2316992    -1.06   0.289    -.7000743    .2089168
+     472231  |   1.316555   .2555885     5.15   0.000     .8151986    1.817911
+     472Xxx  |   .1163464   .2288849     0.51   0.611    -.3326287    .5653215
+     474011  |  -.0814564   .2386961    -0.34   0.733    -.5496769     .386764
+     474041  |  -.1317651   .2627749    -0.50   0.616     -.647218    .3836878
+     474051  |   -.153365   .2543429    -0.60   0.547    -.6522778    .3455478
+     4740Xx  |  -.3757397   .3083573    -1.22   0.223    -.9806058    .2291264
+     475020  |   .2203771   .3267949     0.67   0.500    -.4206558      .86141
+     475040  |  -.9504426   .1073429    -8.85   0.000    -1.161004   -.7398814
+     491011  |   .2279807   .2340051     0.97   0.330    -.2310381    .6869995
+     492011  |   .3442551    .264402     1.30   0.193    -.1743894    .8628996
+     492020  |  -.3950502   .4124383    -0.96   0.338    -1.204079    .4139787
+     492092  |  -.3438756   .1988563    -1.73   0.084    -.7339473    .0461962
+     492098  |   -.423106   .2165167    -1.95   0.051    -.8478199     .001608
+     49209X  |  -.3247529     .21993    -1.48   0.140    -.7561623    .1066564
+     493023  |   .5096409   .4343714     1.17   0.241    -.3424116    1.361693
+     493031  |   .1212132   .2443145     0.50   0.620    -.3580282    .6004545
+     493050  |  -.8938299   .9738531    -0.92   0.359    -2.804116    1.016457
+     493090  |   .3120463   .5244522     0.59   0.552    -.7167064    1.340799
+     499021  |   .2149681   .3401902     0.63   0.528    -.4523407    .8822768
+     499043  |  -.3165712   .2753035    -1.15   0.250    -.8565999    .2234576
+     49904X  |  -.2912665   .3016113    -0.97   0.334    -.8828999     .300367
+     499051  |   .3878656   .2627568     1.48   0.140    -.1275519     .903283
+     499060  |  -.1454101   .3645139    -0.40   0.690    -.8604317    .5696116
+     499071  |  -.2779738    .237101    -1.17   0.241    -.7430653    .1871177
+     4990Xx  |  -.7383764   .2540885    -2.91   0.004     -1.23679   -.2399626
+     511011  |  -.2506788   .2046263    -1.23   0.221    -.6520688    .1507112
+     512020  |  -.0401018   .4819663    -0.08   0.934    -.9855151    .9053116
+     512041  |   .2839839   .3512016     0.81   0.419    -.4049246    .9728924
+     5120Xx  |  -.5820983   .2791168    -2.09   0.037    -1.129607   -.0345896
+     513011  |  -.0555587   .3010797    -0.18   0.854    -.6461494     .535032
+     513020  |   .1732088   .2407232     0.72   0.472    -.2989881    .6454057
+     513092  |  -.6329054   .2288862    -2.77   0.006    -1.081883   -.1839278
+     513099  |  -.2377601   .2890677    -0.82   0.411    -.8047883    .3292681
+     514033  |   .0186068   .3504963     0.05   0.958    -.6689182    .7061318
+     514041  |  -.3723758    .385109    -0.97   0.334    -1.127796    .3830447
+     5140Xx  |   .0604831   .3280177     0.18   0.854    -.5829486    .7039148
+     514111  |  -.1019451   .2295882    -0.44   0.657    -.5522997    .3484095
+     514120  |  -1.055029   .1736127    -6.08   0.000    -1.395583   -.7144746
+     514Xxx  |  -.1241581   .3512046    -0.35   0.724    -.8130725    .5647564
+     515111  |  -.1686867   .2169468    -0.78   0.437    -.5942443     .256871
+     515112  |  -.0714169   .2095979    -0.34   0.733     -.482559    .3397252
+     516011  |  -.5314099   .2549353    -2.08   0.037    -1.031485   -.0313349
+     517011  |  -.0814996   .2614218    -0.31   0.755    -.5942982     .431299
+     517042  |   .3233159   .2990572     1.08   0.280    -.2633075    .9099392
+     518021  |   .2669618   .2690934     0.99   0.321    -.2608853    .7948088
+     518031  |   .0871686   .2370184     0.37   0.713     -.377761    .5520982
+     519010  |  -.5373881   .2321739    -2.31   0.021    -.9928148   -.0819615
+     519020  |  -.3632491   .3185935    -1.14   0.254    -.9881944    .2616961
+     519061  |   .1771326   .2590601     0.68   0.494    -.3310335    .6852986
+     519111  |  -.3296813   .3713527    -0.89   0.375    -1.058118     .398755
+     519120  |  -.5375436   .2572824    -2.09   0.037    -1.042222   -.0328646
+     519151  |   .5540899   .2169853     2.55   0.011     .1284567    .9797231
+     519160  |  -.5559787   .2044314    -2.72   0.007    -.9569864    -.154971
+     519195  |  -.4547529   .2569743    -1.77   0.077    -.9588275    .0493218
+     5191Xx  |  -.4877266    .252899    -1.93   0.054    -.9838072     .008354
+     531000  |  -.5672726   .3708124    -1.53   0.126    -1.294649     .160104
+     532010  |          0  (omitted)
+     533030  |   -.242234    .236249    -1.03   0.305    -.7056542    .2211862
+     533051  |   -.111991   .2285732    -0.49   0.624    -.5603547    .3363727
+     533053  |   -.935901   .1694021    -5.52   0.000    -1.268196   -.6036059
+     534031  |  -.2128248   .4139007    -0.51   0.607    -1.024722    .5990728
+     5350Xx  |          0  (omitted)
+     536030  |   .5803196   .5962149     0.97   0.331    -.5892012     1.74984
+     5360Xx  |   .0450141   .2765325     0.16   0.871    -.4974254    .5874536
+     537021  |  -.1308836   .2846269    -0.46   0.646    -.6892008    .4274336
+     537051  |  -.5049219   .3135322    -1.61   0.108    -1.119939    .1100953
+     537061  |  -.3165635   .4962243    -0.64   0.524    -1.289945     .656818
+     537062  |  -.2953918   .2538393    -1.16   0.245    -.7933169    .2025333
+     537065  |  -.3882861   .2726465    -1.42   0.155    -.9231029    .1465306
+     5370Xx  |  -.6920772   .2695284    -2.57   0.010    -1.220778   -.1633769
+             |
+       _cons |    9.78478   .3728951    26.24   0.000     9.053318    10.51624
+------------------------------------------------------------------------------
+
+. 
+. est store m3
+
+. * Export regression results table
+
+. 
+. esttab m1 m2 m3 using "processed_data\ps5_regression_table.rtf", ///
+command esttab is unrecognized
+r(199);
+
+. 
+.     replace se r2 ar2 label star(* 0.10 ** 0.05 *** 0.01) ///
+se ambiguous abbreviation
+r(111);
+
+. 
+.     title("PS5: Log wage regressions") compress
+command title is unrecognized
+r(199);
+
+. 
+. 
+. 
+. display "Saved: processed_data\ps5_regression_table.rtf"
+Saved: processed_data\ps5_regression_table.rtf
+
+. ssc install estout, replace
+checking estout consistency and verifying not already installed...
+installing into C:\Users\SitaPriya Amaravadi\ado\plus\...
+installation complete.
+
+. esttab m1 m2 m3 using "processed_data\ps5_regression_table.rtf", ///
+option / not allowed
+r(198);
+
+. 
+.     replace se r2 ar2 label star(* 0.10 ** 0.05 *** 0.01) ///
+se ambiguous abbreviation
+r(111);
+
+. 
+.     title("PS5: Log wage regressions") compress
+command title is unrecognized
+r(199);
+
+. esttab m1 m2 m3 using "processed_data\ps5_regression_table.rtf", replace se r2
+>  ar2 label star(* 0.10 ** 0.05 *** 0.01) title("PS5: Log wage regressions") co
+> mpress
+(file processed_data\ps5_regression_table.rtf not found)
+(output written to processed_data\ps5_regression_table.rtf)
+
+. save "processed_data\ps5_analysis_sample.dta", replace
+(file processed_data\ps5_analysis_sample.dta not found)
+file processed_data\ps5_analysis_sample.dta saved
+
+. log close
+      name:  <unnamed>
+       log:  C:\Users\SitaPriya Amaravadi\Desktop\lecture_5_pset\logs\ps5.log
+  log type:  text
+ closed on:  28 Feb 2026, 13:53:56
+--------------------------------------------------------------------------------
